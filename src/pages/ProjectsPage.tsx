@@ -179,21 +179,28 @@ const ProjectsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-soft">
       {/* Header com botão voltar */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-center">
+      <header className="bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
               onClick={() => navigate("/")}
-              className="absolute left-4 flex items-center gap-2 text-blue-600 border-blue-200 hover:bg-blue-50"
+              className="flex items-center gap-2 text-primary hover:text-primary/80 hover:bg-primary/5 transition-all duration-200 group"
             >
-              <ArrowLeft className="w-4 h-4" />
-              Voltar para Casa
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+              <span className="font-medium">Voltar para Casa</span>
             </Button>
+            
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🤖</span>
+              <h2 className="text-lg font-bold text-gray-800 hidden sm:block">
+                Projetos Robóticos
+              </h2>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Título principal estilizado */}
       <div className="text-center py-12 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
